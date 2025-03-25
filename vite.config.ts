@@ -1,5 +1,6 @@
-import react from "@vitejs/plugin-react-swc";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
@@ -10,6 +11,6 @@ export default defineConfig(({ command }) => {
 
 	return {
 		base: slug ? `/${slug}/` : undefined,
-		plugins: [react()],
+		plugins: [react(), tailwindcss(),],
 	};
 });
